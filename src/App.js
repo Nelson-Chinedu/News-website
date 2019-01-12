@@ -1,25 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import Menu from './components/Menu';
+import Advert from './components/Advert';
+import Home from './components/Home';
+import './App.css'
 
 class App extends Component {
+  constructor(props){
+      super(props)
+        this.state = {
+          news:''
+        }
+  }
+  componentDidMount(){
+    const url = "https://newsapi.org/v2/everything?q=tech&apiKey="
+    const key = "db6b258552d44b5a876bd78a8b9d0fe0";
+    fetch(url+key)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+        this.setState({
+            news:data
+        })
+    } )
+    .catch((e)=>console.log(e))
+}
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header />
+        <Menu />
+        <Advert />
+        <Home newsData={this.state.news} />
       </div>
     );
   }

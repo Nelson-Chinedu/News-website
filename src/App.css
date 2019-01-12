@@ -1,32 +1,78 @@
-.App {
-  text-align: center;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.App{
+    margin: 0px;
+    padding: 0px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#main-header{
+    background-color: #ee002d;
+    padding: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.brand-title{
+    color: #ffffff;
+    text-transform: capitalize;
+    /* font-style: italic; */
+    font-family: arial;
+    font-size: 2em;
+    margin-bottom: 0px;
+}
+.brand-motto{
+    font-family: arial;
+    font-size: 13px;
+    color: #dbd9d9;
+}
+.input-search{
+    padding: 10px 12px;
+    border-radius: 4px;
+    outline: 0px;
+    width: 100%;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+}
+.navbar-brand{
+    display: none;
+}
+.advert-container{
+    width: 90%;
+    margin: 0 auto;
+}
+.advert-wrapper{
+    width: 60%;
+}
+.upper-advert{
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    margin: 50px 0 10px;
+}
+.bottom-advert{
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+}
+.news-headline{
+    background-color: #dbd9d9;
+    width: 100%;
+    padding: 8px 10px;
+}
+.category-top, .category-bottom{
+    background-color: #ee002d;
+    color: #ffffff;
+    width: 30%;
+    padding: 8px 20px;
+}
+.category-bottom{
+    background-color: #152535;
 }
