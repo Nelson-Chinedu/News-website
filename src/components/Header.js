@@ -6,7 +6,7 @@ const Header = ()=>{
             <div className="header-wrapper">
             <div className="header-lt">
                 <a href="/" className="brand-title">The News Paper</a>
-                <p className="brand-motto">Everything News & Lifestyle...</p>
+                <p className="brand-motto">Everything News &amp; Lifestyle...</p>
             </div>
             <div className="header-rt">
                 <input type="text" placeholder="Search" className="input-search" />

@@ -1,6 +1,8 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-size: 16px;
+    font-family: helvetica;
     box-sizing: border-box;
 }
 .App{
@@ -75,4 +77,31 @@
 }
 .category-bottom{
     background-color: #152535;
+}
+#footer-wrapper{
+    background-color: #152535;
+    margin: 0px;
+    padding: 0px;
+    height: 500px;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 5em 0 5em;
+    width: 90%;
+    margin: 0 auto;
+}
+.footer-top a{
+    color: #ffffff;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+.footer-top .nav-title{
+    font-size: 16px;
+}
+.footer-bottom{
+    margin-top: 10px;
+}
+.footer-copyright{
+    margin-left: 50px;
 }

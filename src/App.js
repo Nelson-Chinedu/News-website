@@ -3,13 +3,14 @@ import Header from './components/Header';
 import Menu from './components/Menu';
 import Advert from './components/Advert';
 import Home from './components/Home';
+import Footer from './components/Footer';
 import './App.css'
 
 class App extends Component {
   constructor(props){
       super(props)
         this.state = {
-          news:''
+          news:[]
         }
   }
   componentDidMount(){
@@ -20,18 +21,20 @@ class App extends Component {
     .then(data => {
       console.log(data)
         this.setState({
-            news:data
+            news:data.articles
         })
     } )
     .catch((e)=>console.log(e))
 }
+
   render() {
     return (
       <div className="App">
         <Header />
         <Menu />
         <Advert />
-        <Home newsData={this.state.news} />
+        <Home newsApi={this.state.news} />
+        <Footer />
       </div>
     );
   }

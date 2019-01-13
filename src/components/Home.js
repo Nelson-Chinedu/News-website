@@ -1,12 +1,16 @@
 import React from 'react';
 
 const Home = (props)=>{
-
-    
-    return(
+   
+    return (
         <div>
-          {/* {props.newsData} */}
-          <h2>above</h2>
+            {props.newsApi.length !== 0 ? 
+            //    console.log(props.newsApi.map((item)=> item.author))
+                props.newsApi.map((item,index)=>{
+                    return (<li key={index}>{item.author}</li>)
+                })                                 
+                : <h2>Fetching News</h2>
+            }
         </div>
     )
 }
