@@ -16,18 +16,21 @@ const Menu = ()=>{
               <div className="collapse navbar-collapse" id="myNavbar">
               <ul className="nav navbar-nav">
                 <li className="active"><a href="/">Home</a></li>
+                <li><a href="/">Politics</a></li>
+                <li><a href="/">Business</a></li>
                   <li className="dropdown">
-                    <a className="dropdown-toggle" data-toggle="dropdown" href="/">Page 1
+                    <a className="dropdown-toggle" data-toggle="dropdown" href="/">Sports
                     <span className="caret"></span></a>
                 <ul className="dropdown-menu">
-                  <li><a href="/">Page 1-1</a></li>
-                  <li><a href="/">Page 1-2</a></li>
-                  <li><a href="/">Page 1-3</a></li>
+                  <li><a href="/">Football</a></li>
+                  <li><a href="/">Basketball</a></li>
+                  <li><a href="/">Tennis</a></li>
                 </ul>
                </li>
-               <li><a href="/">Politics</a></li>
-               <li><a href="/">Breaking News</a></li>
-               <li><a href="/">Business</a></li>
+               <li><a href="/">Education</a></li>
+               <li><a href="/">Technology</a></li>
+               <li><a href="/">Health</a></li>
+               <li><a href="/">Entertainment</a></li>
              </ul>
            </div>
            </div>

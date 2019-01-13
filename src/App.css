@@ -4,6 +4,7 @@
     font-size: 16px;
     font-family: helvetica;
     box-sizing: border-box;
+    
 }
 .App{
     margin: 0px;
@@ -77,6 +78,19 @@
 }
 .category-bottom{
     background-color: #152535;
+}
+.main-wrapper{
+    display: flex;
+    width:90%;
+    border: 1px solid green;
+    margin: 0 auto 2em;
+    justify-content: space-between;
+}
+.test{}
+.main-container{
+    border: 1px solid red;
+    margin: 10px;
+    width: 30%;
 }
 #footer-wrapper{
     background-color: #152535;
