@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Menu from './components/Menu';
 import Advert from './components/Advert';
+// import Body from './components/Body';
 import Home from './components/Home';
 import Politics from './components/Politics';
+import Business from './components/Business';
+import Education from './components/Education';
+import Technology from './components/Technology';
+import Health from './components/Health';
+import Entertainment from './components/Entertainment';
 import Footer from './components/Footer';
 import './App.css'
 
@@ -15,7 +22,9 @@ class App extends Component {
           politics:[],
           business:[],
           education:[],
-          technology:[]
+          technology:[],
+          health:[],
+          entertainment:[]
         }
   }
 
@@ -89,6 +98,34 @@ class App extends Component {
     .catch((e)=>console.log(e));
   }
 
+  getHealth(){
+    const url = "https://newsapi.org/v2/everything?q=health&apiKey="
+    const key = "db6b258552d44b5a876bd78a8b9d0fe0";
+    fetch(url+key)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+        this.setState({
+            health:data.articles
+        })
+    } )
+    .catch((e)=>console.log(e));
+  }
+
+  getEntertainment(){
+    const url = "https://newsapi.org/v2/everything?q=entertainment&apiKey="
+    const key = "db6b258552d44b5a876bd78a8b9d0fe0";
+    fetch(url+key)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+        this.setState({
+            entertainment:data.articles
+        })
+    } )
+    .catch((e)=>console.log(e));
+  }
+
   componentDidMount(){
     // const url = "https://newsapi.org/v2/everything?q=everything&apiKey="
     // const key = "db6b258552d44b5a876bd78a8b9d0fe0";
@@ -106,6 +143,8 @@ class App extends Component {
     this.getBusiness();
     this.getEducation();
     this.getTechnology();
+    this.getHealth();
+    this.getEntertainment();
     
 }
 
@@ -116,8 +155,17 @@ class App extends Component {
         <Menu />
         <Advert />
         <div className="main-wrapper">
-          <Home newsApi={this.state.news} />
-          <Politics newsApi={this.state.politics} />
+        <Switch>
+          {/* <Home newsApi={this.state.news} />
+          <Politics newsApi={this.state.politics} /> */}
+          <Route exact path="/" render={()=> <Home newsApi={this.state.news}/>}/>
+          <Route path="/politics" render={()=> <Politics newsApi={this.state.politics}/>}/>
+          <Route path="/business" render={()=> <Business newsApi={this.state.business}/>}/>
+          <Route path="/education" render={()=> <Education newsApi={this.state.education}/>}/>
+          <Route path="/technology" render={()=> <Technology newsApi={this.state.technology}/>}/>
+          <Route path="/health" render={()=> <Health newsApi={this.state.health}/>}/>
+          <Route path="/entertainment" render={()=> <Entertainment newsApi={this.state.entertainment}/>}/>
+          </Switch>
         </div>
         <Footer />
       </div>

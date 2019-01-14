@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Menu = ()=>{
     return(
@@ -15,9 +16,9 @@ const Menu = ()=>{
               </div>
               <div className="collapse navbar-collapse" id="myNavbar">
               <ul className="nav navbar-nav">
-                <li className="active"><a href="/">Home</a></li>
-                <li><a href="/">Politics</a></li>
-                <li><a href="/">Business</a></li>
+                <li className="active"><Link to="/">Home</Link></li>
+                <li><Link to="/politics">Politics</Link></li>
+                <li><Link to="/business">Business</Link></li>
                   <li className="dropdown">
                     <a className="dropdown-toggle" data-toggle="dropdown" href="/">Sports
                     <span className="caret"></span></a>
@@ -27,10 +28,10 @@ const Menu = ()=>{
                   <li><a href="/">Tennis</a></li>
                 </ul>
                </li>
-               <li><a href="/">Education</a></li>
-               <li><a href="/">Technology</a></li>
-               <li><a href="/">Health</a></li>
-               <li><a href="/">Entertainment</a></li>
+               <li><Link to="/education">Education</Link></li>
+               <li><Link to="/technology">Technology</Link></li>
+               <li><Link to="/health">Health</Link></li>
+               <li><Link to="/entertainment">Entertainment</Link></li>
              </ul>
            </div>
            </div>
