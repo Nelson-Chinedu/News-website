@@ -105,21 +105,24 @@
     width: 90%;
     margin: 0 auto;
 }
+.footer-top p,
 .footer-top a{
     color: #ffffff;
     font-size: 22px;
     font-family: sans-serif;
 }
 .footer-top .nav-title{
-    font-size: 16px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
 }
 .footer-bottom{
     margin-top: 10px;
 }
-.footer-bottom p{
+.footer-bottom p,
+.footer-bottom p a{
     color: rgba(255, 255, 255, 0.5)
 }
-.footer-bootom p:hover{
+.footer-bottom p  a:hover{
     color:#ffffff;
 }
 .footer-copyright{
