@@ -155,15 +155,7 @@ class App extends Component {
         <Menu />
         <Advert />
         <div className="main-wrapper">
-        <Switch>
-          <Route exact path="/" render={()=> <Home newsApi={this.state.news}/>}/>
-          <Route path="/politics" render={()=> <Politics newsApi={this.state.politics}/>}/>
-          <Route path="/business" render={()=> <Business newsApi={this.state.business}/>}/>
-          <Route path="/education" render={()=> <Education newsApi={this.state.education}/>}/>
-          <Route path="/technology" render={()=> <Technology newsApi={this.state.technology}/>}/>
-          <Route path="/health" render={()=> <Health newsApi={this.state.health}/>}/>
-          <Route path="/entertainment" render={()=> <Entertainment newsApi={this.state.entertainment}/>}/>
-          </Switch>
+        
         </div>
         <aside>
           <h2>side nav</h2>
