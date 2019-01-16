@@ -12,7 +12,7 @@ const Home = (props)=>{
                 props.newsApi.map((item,index)=>{
                     return (
                         <div className="test">
-                            <div key={index} className="main-container">
+                            <div key={index} className="wrapper">
                                 <img src={item.urlToImage} alt="article" className="itemImage" />
                                 {/* <h3>Tech</h3> */}
                                 <p>{item.title}</p>

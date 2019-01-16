@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Menu from './components/Menu';
 import Advert from './components/Advert';
-// import Body from './components/Body';
 import Home from './components/Home';
 import Politics from './components/Politics';
 import Business from './components/Business';
@@ -12,6 +11,7 @@ import Technology from './components/Technology';
 import Health from './components/Health';
 import Entertainment from './components/Entertainment';
 import Footer from './components/Footer';
+import logo2 from './components/image/footer-add.gif';
 import './App.css'
 
 class App extends Component {
@@ -155,11 +155,26 @@ class App extends Component {
         <Menu />
         <Advert />
         <div className="main-wrapper">
-        
+          <div className="main-container">
+            <Switch>
+            <Route exact path="/" render={()=> <Home newsApi={this.state.news}/>}/>
+            <Route path="/politics" render={()=> <Politics newsApi={this.state.politics}/>}/>
+            <Route path="/business" render={()=> <Business newsApi={this.state.business}/>}/>
+            <Route path="/education" render={()=> <Education newsApi={this.state.education}/>}/>
+            <Route path="/technology" render={()=> <Technology newsApi={this.state.technology}/>}/>
+            <Route path="/health" render={()=> <Health newsApi={this.state.health}/>}/>
+            <Route path="/entertainment" render={()=> <Entertainment newsApi={this.state.entertainment}/>}/>
+            </Switch>
+          </div>
+          <aside>
+            <h3>Recent Post</h3>
+            <p>static text here</p>
+            
+          </aside>
         </div>
-        <aside>
-          <h2>side nav</h2>
-        </aside>
+        <div className="container footer-add">
+          <img src={logo2} />
+        </div>
         <Footer />
       </div>
     );

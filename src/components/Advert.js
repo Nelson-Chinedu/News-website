@@ -1,4 +1,5 @@
 import React from 'react';
+import logo1 from './image/hero-add.gif';
 
 const Advert = ()=>{
     return(
@@ -13,8 +14,8 @@ const Advert = ()=>{
                     <p className="news-headline">some text</p>
                 </div>
             </div>
-            <div className=" right advert">
-
+            <div className=" right-advert">
+            <img src={logo1} />
             </div>
         </div>
     )
