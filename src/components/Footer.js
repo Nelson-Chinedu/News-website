@@ -60,7 +60,7 @@ const Footer = ()=>{
 
             <div className="footer-fifth">
               <div className="footer-top">
-                <p>&plus;More</p>
+                <p>&#43;More</p>
               </div>
               <div className="footer-bottom">
                 <p><a href="/">Fashion</a></p>

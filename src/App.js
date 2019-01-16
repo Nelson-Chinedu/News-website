@@ -156,8 +156,6 @@ class App extends Component {
         <Advert />
         <div className="main-wrapper">
         <Switch>
-          {/* <Home newsApi={this.state.news} />
-          <Politics newsApi={this.state.politics} /> */}
           <Route exact path="/" render={()=> <Home newsApi={this.state.news}/>}/>
           <Route path="/politics" render={()=> <Politics newsApi={this.state.politics}/>}/>
           <Route path="/business" render={()=> <Business newsApi={this.state.business}/>}/>
@@ -167,6 +165,9 @@ class App extends Component {
           <Route path="/entertainment" render={()=> <Entertainment newsApi={this.state.entertainment}/>}/>
           </Switch>
         </div>
+        <aside>
+          <h2>side nav</h2>
+        </aside>
         <Footer />
       </div>
     );

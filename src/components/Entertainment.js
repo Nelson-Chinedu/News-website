@@ -13,11 +13,12 @@ const Entertainment = (props)=>{
                     return (
                         <div className="test">
                             <div key={index} className="main-container">
-                                <img src={item.urlToImage} alt="Logo" style={{width:'100%',height:'auto'}} />
+                                <img src={item.urlToImage} alt="Logo" className="itemImage" />
                                 <h3>Entertainment</h3>
                                 <p>{item.title}</p>
-                                <p>By {item.author}</p>
+                                <p>By <span className="text-danger">{item.author}</span></p>
                                 <p>{item.description}</p>
+                                <button className="btn btn-md btn-danger">Read More</button>
                             </div>
                         </div>
                     )
