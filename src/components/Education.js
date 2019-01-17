@@ -1,4 +1,5 @@
 import React from 'react';
+import Loading from './Loading';
 
 const Education = (props)=>{
    
@@ -6,13 +7,13 @@ const Education = (props)=>{
         <div>
             { props.newsApi.length === 0
                 ? 
-                <h2>Fetching Education News</h2>                                 
+                <Loading />                                
                 : 
                 //    console.log(props.newsApi.map((item)=> item.author))
                 props.newsApi.map((item,index)=>{
                     return (
                         <div className="test">
-                            <div key={index} className="main-container">
+                            <div key={index} className="wrapper">
                                 <img src={item.urlToImage} alt="article" className="itemImage" />
                                 <h3>Education</h3>
                                 <p>{item.title}</p>

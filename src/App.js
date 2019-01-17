@@ -168,8 +168,36 @@ class App extends Component {
           </div>
           <aside>
             <h3>Recent Post</h3>
-            <p>static text here</p>
-            
+            {this.state.news.map((recent)=>{
+              return(
+                <div>
+                <div className="aside-article">
+                  <img src={recent.urlToImage} style={{width:'100px',height:'100px'}}/>
+                  <div className="aside-text">
+                    <p className="title"><a className="text-danger" href="/">{recent.title}</a></p>
+                    <p className="published">{recent.publishedAt}</p>
+                  </div>
+                </div>
+                <hr/>
+                </div>
+              )
+            })}
+            <div className="subscription-form">
+              <p className="text-danger">Subscribe to our NewsLetter</p>
+              <form className="form-horizontal">
+              <div className="form-group">
+                <label className="control-label col-sm-2 sr-only" for="email">Email:</label>
+              <div className="col-sm-10">
+                <input type="email" className="form-control" id="email" placeholder="Enter email" />
+              </div>
+              </div>
+              <div className="form-group"> 
+                <div className="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-danger btn-md">Subscribe</button>
+                </div>
+              </div>
+              </form>
+            </div>
           </aside>
         </div>
         <div className="container footer-add">

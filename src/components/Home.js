@@ -1,4 +1,5 @@
 import React from 'react';
+import Loading from './Loading';
 
 const Home = (props)=>{
    
@@ -6,7 +7,7 @@ const Home = (props)=>{
         <div>
             { props.newsApi.length === 0
                 ? 
-                <h2>Fetching Home News</h2>                                 
+                <Loading />                                
                 : 
                 //    console.log(props.newsApi.map((item)=> item.author))
                 props.newsApi.map((item,index)=>{

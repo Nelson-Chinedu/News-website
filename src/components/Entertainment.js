@@ -1,4 +1,5 @@
 import React from 'react';
+import Loading from './Loading';
 
 const Entertainment = (props)=>{
    
@@ -6,14 +7,14 @@ const Entertainment = (props)=>{
         <div>
             { props.newsApi.length === 0
                 ? 
-                <h2>Fetching Entertainment News</h2>                                 
+                <Loading />                                 
                 : 
                 //    console.log(props.newsApi.map((item)=> item.author))
                 props.newsApi.map((item,index)=>{
                     return (
                         <div className="test">
-                            <div key={index} className="main-container">
-                                <img src={item.urlToImage} alt="Logo" className="itemImage" />
+                            <div key={index} className="wrapper">
+                                <img src={item.urlToImage} alt="article" className="itemImage" />
                                 <h3>Entertainment</h3>
                                 <p>{item.title}</p>
                                 <p>By <span className="text-danger">{item.author}</span></p>
