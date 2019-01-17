@@ -4,7 +4,9 @@
     font-size: 16px;
     font-family: helvetica;
     box-sizing: border-box;
-    
+}
+body{
+    width: 100%;
 }
 .App{
     margin: 0px;
@@ -184,6 +186,7 @@ aside h3{
 }
 .footer-copyright{
     margin-left: 50px;
+    color: #ffffff;
 }
 .loader-container{
     width: 30%;
@@ -201,4 +204,84 @@ aside h3{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width:767px){
+    .navbar-brand{
+        display: block;
+    }
+}
+
+@media only screen and (max-width:360px){
+    body{
+        display: ;
+    }
+    #main-header{
+        display: none;
+    }
+    .advert-container{
+        display: block;
+        width: 100%;
+        /* margin: 10px; */
+    }
+    .advert-wrapper{
+        width: 100%;
+    }
+    .upper-advert{
+        display: block;
+        align-items: none;
+        /* padding: 8px 10px;
+        margin: 50px 0 10px; */
+    }
+    .bottom-advert{
+        display:block;
+        align-items: none;
+    }
+    .right-advert{
+        display: none;
+        width: 95%;
+        margin:10px;
+    }
+    .news-headline{
+        display: block;
+        width: 95%;
+        margin: 0px auto;
+        padding: 8px 10px;
+    }
+    .category-top, .category-bottom{
+        width: 95%;
+        margin: 5px auto;
+    }
+    .main-wrapper{
+        display: block;
+        width:100%;
+    }
+    .main-container{
+        width: 100%;
+    }
+    aside{
+        padding: 10px;
+        width: 100%;
+    }
+    .footer-add{
+        margin: 30px auto;
+        width:100px;
+        display: none;
+    }
+    #footer-wrapper{
+        margin: 0px;
+        padding: 10px;
+        width: 100%;
+        height: auto;
+    }
+    .footer-container{
+        display: block;
+        width: 95%;
+        padding: 5px;
+    }
+    .footer-copyright{
+        margin-left: 0px;
+        text-align: center;
+        padding: 10px;
+    }
 }

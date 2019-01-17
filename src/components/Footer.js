@@ -74,7 +74,7 @@ const Footer = ()=>{
 
           </div>
           <div className="footer-copyright">
-            <p>Copyright &copy;2019 All rights reserved | Made with love from api.org </p>
+            <p>Copyright &copy;2019 All rights reserved | Api from <a href="www.newsapi.org" target="_blank">News Api</a> </p>
           </div>
         </div>
     )
