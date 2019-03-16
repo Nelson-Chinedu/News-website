@@ -14,7 +14,7 @@ const Business = (props)=>{
                     return (
                         <div className="test">
                             <div key={index} className="wrapper">
-                            <img src={item.urlToImage} alt="article" className="itemImage" />
+                            <img src={item.urlToImage} alt="logo" className="itemImage" />
                                 <h3>Business</h3>
                                 <p>{item.title}</p>
                                 <p>By <span className="text-danger">{item.author}</span></p>
