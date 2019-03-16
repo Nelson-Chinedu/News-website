@@ -15,7 +15,7 @@ const Advert = ()=>{
                 </div>
             </div>
             <div className=" right-advert">
-            <img src={logo1} />
+            <img src={logo1} alt="logo" />
             </div>
         </div>
     )
