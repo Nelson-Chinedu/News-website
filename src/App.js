@@ -172,7 +172,7 @@ class App extends Component {
               return(
                 <div>
                 <div className="aside-article">
-                  <img src={recent.urlToImage} style={{width:'100px',height:'100px'}}/>
+                  <img src={recent.urlToImage} alt="logo" style={{width:'100px',height:'100px'}}/>
                   <div className="aside-text">
                     <p className="title"><a className="text-danger" href="/">{recent.title}</a></p>
                     <p className="published">{recent.publishedAt}</p>
@@ -201,7 +201,7 @@ class App extends Component {
           </aside>
         </div>
         <div className="container footer-add">
-          <img src={logo2} />
+          <img src={logo2} alt="logo"/>
         </div>
         <Footer />
       </div>
