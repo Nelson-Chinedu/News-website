@@ -8,7 +8,7 @@ const Header = ()=>{
             <div className="header-lt">
                 {/* <a href="/" className="brand-title">The News Paper</a> */}
                 {/* <p className="brand-motto">Everything News &amp; Lifestyle...</p> */}
-                <img src={logo} />
+                <img src={logo} alt="logo" />
             </div>
             {/* <div className="header-rt"> */}
                 {/* <input type="text" placeholder="Search" className="input-search" /> */}
