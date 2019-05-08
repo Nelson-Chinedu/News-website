@@ -186,7 +186,7 @@ class App extends Component {
               <p className="text-danger">Subscribe to our NewsLetter</p>
               <form className="form-horizontal">
               <div className="form-group">
-                <label className="control-label col-sm-2 sr-only" for="email">Email:</label>
+                <label className="control-label col-sm-2 sr-only" htmlFor="email">Email:</label>
               <div className="col-sm-10">
                 <input type="email" className="form-control" id="email" placeholder="Enter email" />
               </div>
